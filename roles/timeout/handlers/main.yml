@@ -1,0 +1,16 @@
+---
+
+- name: Before Handler
+  debug:
+    msg: "{{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}"
+  listen: "Do Things"
+
+- name: Sleep Handler
+  wait_for:
+    timeout: 10
+  listen: "Do Things"
+
+- name: After Handler
+  debug:
+    msg: "{{ now(utc=true,fmt='%Y-%m-%d %H:%M:%S') }}"
+  listen: "Do Things"

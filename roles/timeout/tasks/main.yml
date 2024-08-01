@@ -1,0 +1,7 @@
+---
+
+- name: Do Something
+  debug:
+    msg: "Starting to call handlers"
+  notify: "Do Things"
+  changed_when: True
